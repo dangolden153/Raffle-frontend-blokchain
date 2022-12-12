@@ -84,7 +84,7 @@ function LotteryEntrance() {
       message: "Transaction completed!",
       status: "success",
       position: "topR",
-      icon: "bell"
+      // icon: "bell"
     })
   }
 
@@ -94,20 +94,21 @@ function LotteryEntrance() {
 
 
   return (
-    <div>
-      <button
-        onClick={handleEnterRaffle}
-      >
-        Enter Raffle
-      </button>
+    <div style={{marginLeft:"20px"}}>
+      
       <div>
         {raffleAddress ? (<h2>Hi, your Lottery Entrance: {ethers.utils.formatUnits(entranceFee, "ether")}ETH</h2>) : (
           <h2>Hi, You don't have a Raffle Address!</h2>
         )}
-        <p>Number of players: {numPlayers}</p>
+        <p >Number of players: {numPlayers}</p>
         <p>Recent winner:{""} {recentWinner}</p>
       </div>
-
+      <button
+        onClick={handleEnterRaffle}
+        style={{padding:"10px"}}
+      >
+        Enter Raffle
+      </button>
 
     </div>
   )

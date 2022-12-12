@@ -5,6 +5,14 @@ import LotteryEntrance from '../components/LotteryEntrance'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const styles = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: '#BBE6F260',
+    padding: '10px',
+    marginBottom:'30px'
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -14,10 +22,12 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <div style={styles}>
+          <h2>Hello Web3</h2>
 
-        <h2>Hello Web3</h2>
+          <ConnectButton moralisAuth={false} />
 
-        <ConnectButton moralisAuth={false} />
+        </div>
 
         <LotteryEntrance />
       </main>
